@@ -1,8 +1,9 @@
-#pragma once
-class TestDriver
+namespace Testing
 {
-public:
-	TestDriver(void);
-	~TestDriver(void);
-};
-
+	class TestDriver
+	{
+	public:
+		TestDriver(void);
+		~TestDriver(void);
+	};
+}

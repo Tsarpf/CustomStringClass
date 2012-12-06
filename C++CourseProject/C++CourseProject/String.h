@@ -8,7 +8,11 @@ public:
 	string(void);
 	string(const string &);
 	string& operator= (const string &);
+	//Provide the class with a self-check capability (a check() function that verifies the class invariant).
 	~string(void);
 };
 
 #endif //String_H_
+
+//Const correctness
+//

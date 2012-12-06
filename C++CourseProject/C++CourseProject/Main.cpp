@@ -8,5 +8,6 @@ int Main()
 
 void RunTests()
 {
-
+	Testing::TestDriver * td = new Testing::TestDriver();
+	//td->InitTests or something
 }

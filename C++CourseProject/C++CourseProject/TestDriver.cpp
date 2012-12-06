@@ -1,5 +1,6 @@
 #include "TestDriver.h"
 
+using namespace Testing;
 
 TestDriver::TestDriver(void)
 {
