@@ -2,14 +2,11 @@
 
 using namespace Testing;
 
-OperatorOverloadTests::OperatorOverloadTests(void)
+OperatorOverloadTests::OperatorOverloadTests(void) : 
 {
-	//m_TestCategoryName = "OperatorOverloadTests";
-	m_ReturnStruct.m_InfoString = "OperatorOverloadTests";
-	m_ReturnStruct.m_TestsFailed = 0;
-	m_ReturnStruct.m_TestsTotal = 0;
+	m_TestCategoryName = "OperatorOverloadTests";
 
-	
+	//Add all test functions and their names here.
 	m_Tests.push_back([]() { return AssignmentOperatorTest(); });
 	m_TestNames.push_back("AssignmentOperatorTest");
 }

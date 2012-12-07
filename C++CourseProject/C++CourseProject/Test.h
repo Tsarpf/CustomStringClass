@@ -10,6 +10,7 @@ namespace Testing
 	class Test
 	{
 	public:
+		Test();
 		int GetNumberOfTestsInCategory();
 		int GetNumberOfTestsFailedInCategory();
 		virtual void PerformTests() = 0;

@@ -2,15 +2,12 @@
 #include "Test.h"
 #include <iostream>
 using namespace Testing;
-/*
-Test::Test(void)
-{
-}
 
-Test::~Test(void)
+
+Test::Test() : m_TestsFailed(0), m_TestsTotal(0)
 {
+
 }
-*/
 
 int Test::GetNumberOfTestsFailedInCategory()
 {
@@ -35,21 +32,25 @@ void Test::PerformTests()
 		{
 			m_TestsFailed++;
 			
-			std::cout << "\t" + m_TestNames[index] + " failed" << std::endl;
-			//m_ReturnStruct.m_TestsFailed++;
-			//m_ReturnStruct.m_InfoString = "\t" + m_TestNames[index] + " failed\n" + m_ReturnStruct.m_InfoString;
+			std::cout << "\t" + m_TestNames[index] << " failed" << std::endl;
 		}
 		else
 		{
-			//m_ReturnStruct.m_InfoString = "\t" + m_TestNames[index] + "  succeeded\n" + m_ReturnStruct.m_InfoString;
+			std::cout << "\t" << m_TestNames[index] << " succeeded" << std::endl;
 		}
-
 
 
 		m_TestsTotal++;
 		
+
 		index++;
+
+
 		Teardown();
 	}
-	return m_ReturnStruct; //Todo errything.
+
+	if(m_TestsFailed == 0)
+		std::cout << m_TestCategoryName << " succeeded. All " << m_TestsTotal << " tests passed.";
+	else
+		std::cout << m_TestCategoryName << " failed." << m_TestsFailed << " out of " << m_TestsTotal << " failed.";
 }

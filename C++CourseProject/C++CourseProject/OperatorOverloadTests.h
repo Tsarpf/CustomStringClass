@@ -10,7 +10,8 @@ namespace Testing
 	public:
 		OperatorOverloadTests(void);
 		~OperatorOverloadTests(void);
-		ReturnStruct PerformTests(); //ToDo: returns struct, not bool, 
+		void PerformTests();
+
 	private:
 		String * m_String;
 
