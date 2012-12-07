@@ -30,8 +30,3 @@ void OperatorOverloadTests::Teardown()
 {
 	delete m_String;
 }
-
-void OperatorOverloadTests::PerformTests()
-{
-
-}

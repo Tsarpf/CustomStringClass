@@ -10,7 +10,6 @@ namespace Testing
 	public:
 		OperatorOverloadTests(void);
 		~OperatorOverloadTests(void);
-		void PerformTests();
 
 	private: //Present in every test category.
 		void Setup();

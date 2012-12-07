@@ -13,7 +13,7 @@ namespace Testing
 		Test();
 		int GetNumberOfTestsInCategory();
 		int GetNumberOfTestsFailedInCategory();
-		virtual void PerformTests() = 0;
+		virtual void PerformTests();
 	protected:
 		bool m_Result;
 		std::vector<std::function<bool()>> m_Tests;

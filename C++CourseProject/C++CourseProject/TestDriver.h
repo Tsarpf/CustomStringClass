@@ -12,5 +12,7 @@ namespace Testing
 		void BeginTesting();
 
 		std::vector<Test*> m_Tests;
+		int m_TotalTestCount;
+		int m_TotalFailedTestCount;
 	};
 }
