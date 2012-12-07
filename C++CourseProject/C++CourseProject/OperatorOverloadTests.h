@@ -12,15 +12,14 @@ namespace Testing
 		~OperatorOverloadTests(void);
 		void PerformTests();
 
-	private:
-		String * m_String;
-
-		static bool AssignmentOperatorTest();
+	private: //Present in every test category.
 		void Setup();
 		void Teardown();
+		
+	private: //Test category specific.
+		String * m_String;
+		static bool AssignmentOperatorTest();
 	};
-
-
 }
 
 #endif //OperatorOverloadTests_H_
