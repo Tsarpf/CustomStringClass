@@ -64,6 +64,7 @@
   <ItemGroup>
     <ClInclude Include="OperatorOverloadTests.h" />
     <ClInclude Include="String.h" />
+    <ClInclude Include="StringConstructorAndInitTests.h" />
     <ClInclude Include="Test.h" />
     <ClInclude Include="TestDriver.h" />
   </ItemGroup>
@@ -71,6 +72,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="OperatorOverloadTests.cpp" />
     <ClCompile Include="String.cpp" />
+    <ClCompile Include="StringConstructorAndInitTests.cpp" />
     <ClCompile Include="Test.cpp" />
     <ClCompile Include="TestDriver.cpp" />
   </ItemGroup>

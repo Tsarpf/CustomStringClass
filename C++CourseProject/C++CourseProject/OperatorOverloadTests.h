@@ -1,6 +1,7 @@
 #ifndef OperatorOverloadTests_H_
 #define OperatorOverloadTests_H_
 #include "Test.h"
+#include "String.h"
 
 namespace Testing
 {
@@ -9,14 +10,11 @@ namespace Testing
 	public:
 		OperatorOverloadTests(void);
 		~OperatorOverloadTests(void);
-		bool PerformTests(); //ToDo: returns struct, not bool, 
+		ReturnStruct PerformTests(); //ToDo: returns struct, not bool, 
 	private:
-		//Actual tests
+		String * m_String;
+
 		static bool AssignmentOperatorTest();
-		void PopulateTestList()
-		{
-			m_Tests.push_back([]() { return AssignmentOperatorTest(); });
-		}
 		void Setup();
 		void Teardown();
 	};

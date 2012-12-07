@@ -2,14 +2,14 @@
 #ifndef String_H_
 #define String_H_
 
-class string
+class String
 {
 public:
-	string(void);
-	string(const string &);
-	string& operator= (const string &);
+	String(void);
+	String(const String &);
+	String& operator= (const String &);
 	//Provide the class with a self-check capability (a check() function that verifies the class invariant).
-	~string(void);
+	~String(void);
 };
 
 #endif //String_H_

@@ -1,11 +1,11 @@
-#include "string.h"
+#include "String.h"
 
 
-string::string(void)
+String::String(void)
 {
 }
 
 
-string::~string(void)
+String::~String(void)
 {
 }

@@ -36,6 +36,9 @@
     <ClCompile Include="OperatorOverloadTests.cpp">
       <Filter>Source Files\Tests</Filter>
     </ClCompile>
+    <ClCompile Include="StringConstructorAndInitTests.cpp">
+      <Filter>Source Files\Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="String.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OperatorOverloadTests.h">
+      <Filter>Header Files\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="StringConstructorAndInitTests.h">
       <Filter>Header Files\Tests</Filter>
     </ClInclude>
   </ItemGroup>
