@@ -9,7 +9,14 @@ namespace Testing
 	public:
 		OperatorOverloadTests(void);
 		~OperatorOverloadTests(void);
-		bool PerformTests();
+		bool PerformTests(); //ToDo: returns struct, not bool, 
+	private:
+		//Actual tests
+		static bool AssignmentOperatorTest();
+		void PopulateTestList()
+		{
+			m_Tests.push_back([]() { return AssignmentOperatorTest(); });
+		}
 	};
 
 
