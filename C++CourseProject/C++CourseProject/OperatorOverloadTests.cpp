@@ -21,6 +21,9 @@ bool OperatorOverloadTests::PerformTests()
 		bool result = (*it)();
 
 		//ToDo: something with the result
+		//Is this actually test category specific or could this be generalized?
+		//This function is probably identical, each test_category just uses it's own setup and teardown
+		//I wonder how to implement this...
 
 		Teardown();
 	}
@@ -30,4 +33,14 @@ bool OperatorOverloadTests::PerformTests()
 bool OperatorOverloadTests::AssignmentOperatorTest()
 {
 	
+}
+
+void OperatorOverloadTests::Setup()
+{
+
+}
+
+void OperatorOverloadTests::Teardown()
+{
+
 }

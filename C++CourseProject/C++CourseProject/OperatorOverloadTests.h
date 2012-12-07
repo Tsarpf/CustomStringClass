@@ -17,6 +17,8 @@ namespace Testing
 		{
 			m_Tests.push_back([]() { return AssignmentOperatorTest(); });
 		}
+		void Setup();
+		void Teardown();
 	};
 
 
