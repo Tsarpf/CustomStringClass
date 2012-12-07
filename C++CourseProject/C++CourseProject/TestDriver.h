@@ -1,3 +1,5 @@
+#include <vector>
+#include "Test.h"
 namespace Testing
 {
 	class TestDriver
@@ -5,5 +7,10 @@ namespace Testing
 	public:
 		TestDriver(void);
 		~TestDriver(void);
+	private:
+		void PopulateTestCategoryList();
+		void BeginTesting();
+
+		std::vector<Test*> m_Tests;
 	};
 }

@@ -1,5 +1,8 @@
 #include "TestDriver.h"
 
+#include "OperatorOverloadTests.h"
+#include "StringConstructorAndInitTests.h"
+
 using namespace Testing;
 
 TestDriver::TestDriver(void)
@@ -9,17 +12,19 @@ TestDriver::TestDriver(void)
 
 TestDriver::~TestDriver(void)
 {
+	for(auto it = m_Tests.begin(); it != m_Tests.end(); it++)
+	{
+
+	}
 }
 
-//Custom assert()
+void TestDriver::PopulateTestCategoryList()
+{
+	m_Tests.push_back(new OperatorOverloadTests());
+	m_Tests.push_back(new StringConstructorAndInitTests());
+}
 
-//Run through all tests, at the list all failures & successes.
-//
+void TestDriver::BeginTesting()
+{
 
-
-//Point is to make a new file for each category of tests.
-
-//Each test will need a separate instance of the class to test with.
-//However, they all need a similar setup phase (function or whatever)
-
-//How do I minimize the amount of repetition in code?
+}

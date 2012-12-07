@@ -2,7 +2,7 @@
 
 using namespace Testing;
 
-OperatorOverloadTests::OperatorOverloadTests(void) : 
+OperatorOverloadTests::OperatorOverloadTests(void)
 {
 	m_TestCategoryName = "OperatorOverloadTests";
 
@@ -18,7 +18,7 @@ OperatorOverloadTests::~OperatorOverloadTests(void)
 
 bool OperatorOverloadTests::AssignmentOperatorTest()
 {
-	
+	return false; //todo: everything
 }
 
 void OperatorOverloadTests::Setup()
@@ -29,4 +29,9 @@ void OperatorOverloadTests::Setup()
 void OperatorOverloadTests::Teardown()
 {
 	delete m_String;
+}
+
+void OperatorOverloadTests::PerformTests()
+{
+
 }
