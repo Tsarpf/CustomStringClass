@@ -7,7 +7,7 @@ OperatorOverloadTests::OperatorOverloadTests(void)
 	m_TestCategoryName = "OperatorOverloadTests";
 
 	//Add all test functions and their names here.
-	m_Tests.push_back([]() { return AssignmentOperatorTest(); });
+	m_Tests.push_back([&]() { return AssignmentOperatorTest(); });
 	m_TestNames.push_back("AssignmentOperatorTest");
 }
 

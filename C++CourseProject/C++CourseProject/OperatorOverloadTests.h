@@ -17,7 +17,7 @@ namespace Testing
 		
 	private: //Test category specific.
 		String * m_String;
-		static bool AssignmentOperatorTest();
+		bool AssignmentOperatorTest();
 	};
 }
 
