@@ -21,7 +21,6 @@ int Test::GetNumberOfTestsInCategory()
 void Test::PerformTests()
 {
 	int index = 0;
-	//assert m_TestNames count is the same as m_Tests count
 	for(auto it = m_Tests.begin(); it != m_Tests.end(); it++)
 	{
 		Setup();

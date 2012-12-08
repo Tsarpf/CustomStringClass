@@ -1,3 +1,6 @@
+#ifndef MiscellaneousTests_H_
+#define MiscellaneousTests_H_
+
 #include "Test.h"
 #include "String.h"
 
@@ -35,3 +38,5 @@ namespace Testing
 		String * m_String;
 	};
 }
+
+#endif

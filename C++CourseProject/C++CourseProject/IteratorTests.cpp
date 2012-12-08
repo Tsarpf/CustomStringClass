@@ -79,8 +79,6 @@ void IteratorTests::IteratorPointsToCorrectCharacterAfterCharPointerConstructor(
 	char * testString = "0123456789";
 
 	String::Iterator it(&testString[5]);
-	//char kives = *it;
-	//kives == "5";
 	ASSERT(it == "5");
 }
 

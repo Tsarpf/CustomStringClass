@@ -36,7 +36,7 @@ String::~String(void)
 
 const char* String::data()
 {
-	return m_String;  //todo: tests for this function....
+	return m_String; 
 }
 
 char* String::operator[](int index)

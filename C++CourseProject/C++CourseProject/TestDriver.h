@@ -1,3 +1,6 @@
+#ifndef TestDriver_H_
+#define TestDriver_H_
+
 #include <vector>
 #include "Test.h"
 namespace Testing
@@ -18,3 +21,5 @@ namespace Testing
 		int m_TotalFailedTestCount;
 	};
 }
+
+#endif

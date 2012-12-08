@@ -18,7 +18,6 @@ StringConstructorAndInitTests::~StringConstructorAndInitTests(void)
 
 }
 
-//void StringConstructorAndInitTests::
 void StringConstructorAndInitTests::DataCorrectIfUsedCopyConstructor()
 {
 	delete m_String;

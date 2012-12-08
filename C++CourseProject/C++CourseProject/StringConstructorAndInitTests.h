@@ -17,7 +17,6 @@ namespace Testing
 		void Teardown();
 
 	private:
-		//ToDo: Add test specific stuff here.
 		//Tests
 		void StringEmptyAfterDefaultConstructorTest();
 		void DataCorrectIfCharPointerConstructorGivenEmptyStringLiteralTest();

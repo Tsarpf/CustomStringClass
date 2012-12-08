@@ -1,4 +1,3 @@
-#pragma once
 #ifndef String_H_
 #define String_H_
 
@@ -28,8 +27,6 @@ public:
 
 	static void Swap(String*,String*);
 
-	//Provide the class with a self-check capability (a check() function that verifies the class invariant).
-	void Check();
 	~String(void);
 	const char* data();
 protected:
@@ -45,19 +42,13 @@ public:
 		}
 		~Iterator()
 		{
-			//delete m_Pointer;
 		}
 
 		Iterator(char * Str)
 		{
 			m_Pointer = Str;
 		}
-		/*
-		bool operator==(char OtherChar) //Wonder if this works
-		{
-			*m_Pointer == OtherChar;
-		}
-		*/
+
 		bool operator==(char * OtherChar)
 		{
 			if(OtherChar == nullptr)
@@ -96,6 +87,3 @@ public:
 };
 
 #endif //String_H_
-
-//Const correctness
-//
