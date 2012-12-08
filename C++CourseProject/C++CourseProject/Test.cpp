@@ -30,27 +30,14 @@ void Test::PerformTests()
 
 		try
 		{
-			result = (*it)();		
+			(*it)();		
 		}
 		catch(std::exception e)
 		{
 			m_TestsFailed++;
 			
 			std::cout << "\t" + m_TestNames[index] << " failed: " << e.what() <<std::endl;
-			result = false;
 		}
-
-		if(result)
-		{
-			std::cout << "\t" << m_TestNames[index] << " succeeded" << std::endl;
-		}
-
-
-		m_TestsTotal++;
-		
-
-		index++;
-
 
 		Teardown();
 	}

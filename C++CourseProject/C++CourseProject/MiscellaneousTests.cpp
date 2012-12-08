@@ -34,24 +34,24 @@ void MiscellaneousTests::Setup()
 }
 
 
-bool MiscellaneousTests::StringsAreEqualWorksWithEmptyStringsTest()
+void MiscellaneousTests::StringsAreEqualWorksWithEmptyStringsTest()
 {
 	char* testStringOne = "";
 	char* testStringTwo = "";
 
-	bool result =  StringsAreEqual(testStringOne,testStringTwo);
+	bool result =  m_String->StringsAreEqual(testStringOne,testStringTwo);
 
 
 
 }
-bool MiscellaneousTests::StringsAreEqualWorksWhenOtherStringIsEmpty()
+void MiscellaneousTests::StringsAreEqualWorksWhenOtherStringIsEmpty()
 {
 
 }
-bool MiscellaneousTests::StringsAreEqualWorksWithDifferentStringsWithSameBeginningTest()
+void MiscellaneousTests::StringsAreEqualWorksWithDifferentStringsWithSameBeginningTest()
 {
 }
-bool MiscellaneousTests::StringsAreEqualReturnsTrueWhenStringsAreSameTest()
+void MiscellaneousTests::StringsAreEqualReturnsTrueWhenStringsAreSameTest()
 {
 
 }

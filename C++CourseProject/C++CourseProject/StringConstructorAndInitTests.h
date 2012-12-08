@@ -19,7 +19,7 @@ namespace Testing
 	private:
 		//ToDo: Add test specific stuff here.
 		//Tests
-		bool StringEmptyAfterDefaultConstructorTest();
+		void StringEmptyAfterDefaultConstructorTest();
 
 	private:
 		//Data needed by tests

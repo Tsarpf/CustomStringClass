@@ -16,10 +16,10 @@ namespace Testing
 	private:
 		//ToDo: Add test specific stuff here.
 		//Tests
-		bool StringsAreEqualWorksWithEmptyStringsTest();
-		bool StringsAreEqualWorksWhenOtherStringIsEmpty();
-		bool StringsAreEqualWorksWithDifferentStringsWithSameBeginningTest();
-		bool StringsAreEqualReturnsTrueWhenStringsAreSameTest();
+		void StringsAreEqualWorksWithEmptyStringsTest();
+		void StringsAreEqualWorksWhenOtherStringIsEmpty();
+		void StringsAreEqualWorksWithDifferentStringsWithSameBeginningTest();
+		void StringsAreEqualReturnsTrueWhenStringsAreSameTest();
 
 	private:
 		//Data needed by tests

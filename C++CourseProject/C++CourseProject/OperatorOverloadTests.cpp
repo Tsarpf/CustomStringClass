@@ -16,9 +16,9 @@ OperatorOverloadTests::~OperatorOverloadTests(void)
 {
 }
 
-bool OperatorOverloadTests::AssignmentOperatorTest()
+void OperatorOverloadTests::AssignmentOperatorTest()
 {
-	return false; //todo: everything
+//	return false; //todo: everything
 }
 
 void OperatorOverloadTests::Setup()

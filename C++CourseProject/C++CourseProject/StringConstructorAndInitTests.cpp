@@ -17,9 +17,9 @@ StringConstructorAndInitTests::~StringConstructorAndInitTests(void)
 }
 
 
-bool StringConstructorAndInitTests::StringEmptyAfterDefaultConstructorTest()
+void StringConstructorAndInitTests::StringEmptyAfterDefaultConstructorTest()
 {
-	ASSERT(StringsAreEqual(m_String->data(), ""));
+	ASSERT(m_String->StringsAreEqual(m_String->data(), ""));
 }
 
 void StringConstructorAndInitTests::Setup()

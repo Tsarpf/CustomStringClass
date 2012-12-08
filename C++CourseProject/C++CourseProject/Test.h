@@ -17,7 +17,7 @@ namespace Testing
 		virtual void PerformTests();
 	protected:
 		bool m_Result;
-		std::vector<std::function<bool()>> m_Tests;
+		std::vector<std::function<void()>> m_Tests;
 		std::vector<std::string> m_TestNames;
 
 		virtual void Setup() = 0;

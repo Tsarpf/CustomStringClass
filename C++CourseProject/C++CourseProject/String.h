@@ -12,7 +12,7 @@ public:
 	void Check();
 	~String(void);
 	const char* data();
-	bool StringsAreEqual(const char *, const char *);
+	bool StringsAreEqual(const char * a, const char * b);
 private:
 	char* str;
 };
