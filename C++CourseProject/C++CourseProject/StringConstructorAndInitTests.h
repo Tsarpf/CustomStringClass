@@ -20,8 +20,10 @@ namespace Testing
 		//ToDo: Add test specific stuff here.
 		//Tests
 		void StringEmptyAfterDefaultConstructorTest();
-		//void StringEqualityOperator
+		void DataCorrectIfCharPointerConstructorGivenEmptyStringLiteralTest();
+		void DataCorrectIfCharPointerConstructorGivenNonEmptyStringLiteralTest();
 
+		void DataCorrectIfUsedCopyConstructor();
 	private:
 		//Data needed by tests
 		String * m_String;
