@@ -20,6 +20,7 @@ void RunTests()
 	{
 	Testing::TestDriver * td = new Testing::TestDriver();
 	td->BeginTesting();
+	delete td;
 	}
 	catch(...)
 	{

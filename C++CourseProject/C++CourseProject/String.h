@@ -9,8 +9,10 @@ public:
 	String(void);
 	String(const String &);
 	String(const char *);
+
 	String& operator= (const String &);
 	String& operator= (const char *);
+	char operator[](int);
 	bool operator==(const char *);
 	
 	//Static String functions
@@ -25,6 +27,12 @@ public:
 	const char* data();
 private:
 	char* m_String;
+
+public:
+	class Iterator
+	{
+		
+	}
 };
 
 #endif //String_H_

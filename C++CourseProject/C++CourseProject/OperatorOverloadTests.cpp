@@ -10,12 +10,19 @@ OperatorOverloadTests::OperatorOverloadTests(void)
 	m_Tests.push_back([&]() { return DataCorrectAfterAssignmentToCharPointerTest(); });
 	m_Tests.push_back([&]() { return EqualToOperatorReturnsTrueWhenComparingToEqualStringLiteralTest(); });
 	m_Tests.push_back([&]() { return DataCorrectAfterAssignmentToOtherStringTest();});
+	m_Tests.push_back([&]() { return UsingOperatorAtReturnCorrectChar();});
 
 }
 
 
 OperatorOverloadTests::~OperatorOverloadTests(void)
 {
+}
+
+void OperatorOverloadTests::UsingOperatorAtReturnCorrectChar()
+{
+	*m_String = "0123456789";
+	ASSERT((*m_String)[6] == '6');
 }
 
 void OperatorOverloadTests::DataCorrectAfterAssignmentToOtherStringTest()

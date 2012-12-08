@@ -1,5 +1,5 @@
 #include "String.h"
-
+#include <string> //Only used for std::exception
 
 String::String(void)
 {
@@ -27,6 +27,18 @@ String::~String(void)
 const char* String::data()
 {
 	return m_String;  //todo: tests for this function....
+}
+
+char String::operator[](int index)
+{
+	if(index < 0 || index >= StringLength(m_String))
+		throw std::exception("Index out of bounds");
+
+	if(StringLength(m_String) == 1)
+		return 0;
+
+
+	return m_String[index];
 }
 
 bool String::operator==(const char * inputString)

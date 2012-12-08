@@ -22,6 +22,7 @@ namespace Testing
 		void DataCorrectAfterAssignmentToCharPointerTest();
 		void EqualToOperatorReturnsTrueWhenComparingToEqualStringLiteralTest();
 		void DataCorrectAfterAssignmentToOtherStringTest();
+		void UsingOperatorAtReturnCorrectChar();
 	};
 }
 
