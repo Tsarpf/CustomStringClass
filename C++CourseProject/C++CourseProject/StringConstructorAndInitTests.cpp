@@ -7,6 +7,7 @@ StringConstructorAndInitTests::StringConstructorAndInitTests(void)
 
 	//Add all test functions and their names here.
 	m_Tests.push_back([&]() { return StringEmptyAfterDefaultConstructorTest(); });
+	//m_Tests.push_back([&]() { return StringEmptyAfterDefaultConstructorTest(); });
 }
 
 
@@ -14,6 +15,8 @@ StringConstructorAndInitTests::~StringConstructorAndInitTests(void)
 {
 
 }
+
+//void StringConstructorAndInitTests::
 
 
 void StringConstructorAndInitTests::StringEmptyAfterDefaultConstructorTest()

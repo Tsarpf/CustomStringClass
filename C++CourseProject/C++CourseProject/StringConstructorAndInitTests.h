@@ -20,6 +20,7 @@ namespace Testing
 		//ToDo: Add test specific stuff here.
 		//Tests
 		void StringEmptyAfterDefaultConstructorTest();
+		//void StringEqualityOperator
 
 	private:
 		//Data needed by tests

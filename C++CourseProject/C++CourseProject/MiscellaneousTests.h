@@ -14,12 +14,21 @@ namespace Testing
 		void Teardown();
 
 	private:
-		//ToDo: Add test specific stuff here.
 		//Tests
+
+		//void StringsAreEqual(const char *, const char *) tests
 		void StringsAreEqualWorksWithEmptyStringsTest();
-		void StringsAreEqualWorksWhenOtherStringIsEmpty();
+		void StringsAreEqualWorksWhenOtherStringIsEmptyTest();
 		void StringsAreEqualWorksWithDifferentStringsWithSameBeginningTest();
 		void StringsAreEqualReturnsTrueWhenStringsAreSameTest();
+
+		//int StringLength() tests
+		void StringLengthReturnZeroWhenEmptyTest();
+		void StringLengthReturnCorrectWhenNonZeroTest();
+
+		//char *  StringCopy(const char *) tests
+		void StringCopyReturnsEmptyWhenInputEmpty();
+		void StringCopyCopiesNonEmptyStringCorrectly();
 
 	private:
 		//Data needed by tests

@@ -17,7 +17,11 @@ namespace Testing
 		
 	private: //Test category specific.
 		String * m_String;
-		void AssignmentOperatorTest();
+
+		//Tests
+		void DataCorrectAfterAssignmentToCharPointerTest();
+		void EqualToOperatorReturnsTrueWhenComparingToEqualStringLiteralTest();
+		void DataCorrectAfterAssignmentToOtherStringTest();
 	};
 }
 

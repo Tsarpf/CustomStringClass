@@ -3,20 +3,74 @@
 
 String::String(void)
 {
-	str = new char[1];
-	str[0] = '\0';
-	//str = 
+	m_String = new char[1];
+	m_String[0] = '\0';
+}
+
+String::String(const char * str)
+{
+	m_String = StringCopy(str);
+}
+
+
+String::String(const String & otherString)
+{
+	m_String = StringCopy(otherString.m_String);
 }
 
 
 String::~String(void)
 {
-	delete [] str;
+	delete [] m_String;
 }
 
 const char* String::data()
 {
-	return str; 
+	return m_String;  //todo: tests for this function....
+}
+
+bool String::operator==(const char * inputString)
+{
+	return StringsAreEqual(m_String, inputString);
+}
+
+String& String::operator=(const String & otherString)
+{
+	m_String = StringCopy(otherString.m_String);
+
+	return *this;
+}
+
+String& String::operator=(const char * string)
+{
+	m_String = StringCopy(string);
+
+	return *this;
+}
+
+char * String::StringCopy(const char * b)
+{
+	int length = StringLength(b);
+
+	char * a = new char[length];
+
+	for(int i = 0; i < length; i++)
+	{
+		a[i] = b[i];
+	}
+
+	return a;
+}
+
+
+int String::StringLength(const char * inputString)
+{
+	int i = 0;
+	while(inputString[i] != 0)
+	{
+		i++;
+	}
+	return i + 1; //+1 comes from null terminator
 }
 
 bool String::StringsAreEqual(const char * a , const char * b)

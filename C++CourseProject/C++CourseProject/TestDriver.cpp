@@ -24,10 +24,10 @@ TestDriver::~TestDriver(void)
 
 void TestDriver::PopulateTestCategoryList()
 {
-	//m_Tests.push_back(new OperatorOverloadTests());
+	m_Tests.push_back(new OperatorOverloadTests());
 	m_Tests.push_back(new StringConstructorAndInitTests());
 	m_Tests.push_back(new MiscellaneousTests());
-	//ToDo: add all tests here.
+	//ToDo: add all test categories here.
 }
 
 void TestDriver::BeginTesting()
