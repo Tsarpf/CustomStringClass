@@ -34,7 +34,9 @@ namespace Testing
 #endif //Test_H_
 
 
-
+#ifdef NDEBUG
+#define ASSERT(expr)
+#else
 #define ASSERT(expr)										\
 															\
 if(!(expr))													\
@@ -45,3 +47,4 @@ else														\
 {															\
 	std::cout << __FUNCTION__ << "\tpassed" << std::endl;	\
 }
+#endif
