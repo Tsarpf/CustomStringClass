@@ -4,17 +4,15 @@ using namespace Testing;
 
 MiscellaneousTests::MiscellaneousTests(void)
 {
+	m_TestCategoryName = "MiscellaneousTests";
+
 	m_Tests.push_back([&]() { return StringsAreEqualWorksWithEmptyStringsTest(); });
-	m_TestNames.push_back("StringsAreEqualWorksWithEmptyStringsTest");
 	
 	m_Tests.push_back([&]() { return StringsAreEqualWorksWhenOtherStringIsEmpty(); });
-	m_TestNames.push_back("StringsAreEqualWorksWhenOtherStringIsEmpty");
 
 	m_Tests.push_back([&]() { return StringsAreEqualWorksWithDifferentStringsWithSameBeginningTest(); });
-	m_TestNames.push_back("StringsAreEqualWorksWithDifferentStringsWithSameBeginningTest");
 	
 	m_Tests.push_back([&]() { return StringsAreEqualReturnsTrueWhenStringsAreSameTest(); });
-	m_TestNames.push_back("StringsAreEqualReturnsTrueWhenStringsAreSameTest");
 }
 
 
@@ -33,7 +31,6 @@ void MiscellaneousTests::Setup()
 	m_String = new String;
 }
 
-
 void MiscellaneousTests::StringsAreEqualWorksWithEmptyStringsTest()
 {
 	char* testStringOne = "";
@@ -41,17 +38,32 @@ void MiscellaneousTests::StringsAreEqualWorksWithEmptyStringsTest()
 
 	bool result =  m_String->StringsAreEqual(testStringOne,testStringTwo);
 
-
-
+	ASSERT(result);
 }
 void MiscellaneousTests::StringsAreEqualWorksWhenOtherStringIsEmpty()
 {
+	char* testStringOne = "";
+	char* testStringTwo = "asdf";
 
+	bool result =  m_String->StringsAreEqual(testStringOne,testStringTwo);
+
+	ASSERT(!result);
 }
 void MiscellaneousTests::StringsAreEqualWorksWithDifferentStringsWithSameBeginningTest()
 {
+	char* testStringOne = "asdf";
+	char* testStringTwo = "asdf fdsa";
+
+	bool result =  m_String->StringsAreEqual(testStringOne,testStringTwo);
+
+	ASSERT(!result);
 }
 void MiscellaneousTests::StringsAreEqualReturnsTrueWhenStringsAreSameTest()
 {
+	char* testStringOne = "asdffdsa";
+	char* testStringTwo = "asdffdsa";
 
+	bool result =  m_String->StringsAreEqual(testStringOne,testStringTwo);
+
+	ASSERT(result);
 }

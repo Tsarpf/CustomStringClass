@@ -2,6 +2,7 @@
 
 #include "OperatorOverloadTests.h"
 #include "StringConstructorAndInitTests.h"
+#include "MiscellaneousTests.h"
 
 #include <iostream>
 
@@ -25,6 +26,7 @@ void TestDriver::PopulateTestCategoryList()
 {
 	//m_Tests.push_back(new OperatorOverloadTests());
 	m_Tests.push_back(new StringConstructorAndInitTests());
+	m_Tests.push_back(new MiscellaneousTests());
 	//ToDo: add all tests here.
 }
 
@@ -36,10 +38,11 @@ void TestDriver::BeginTesting()
 		test->PerformTests();
 		m_TotalTestCount += test->GetNumberOfTestsInCategory();
 		m_TotalFailedTestCount += test->GetNumberOfTestsFailedInCategory();
+		std::cout << std::endl;
 	}
 
+	std::cout << "Total: " << std::endl;
 
-	std::cout << std::endl;
 	if(m_TotalFailedTestCount == 0)
 	{
 		std::cout << "All " << m_TotalTestCount << " tests passed" << std::endl;

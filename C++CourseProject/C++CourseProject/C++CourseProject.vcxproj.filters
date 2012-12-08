@@ -40,7 +40,7 @@
       <Filter>Source Files\Tests</Filter>
     </ClCompile>
     <ClCompile Include="MiscellaneousTests.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +60,7 @@
       <Filter>Header Files\Tests</Filter>
     </ClInclude>
     <ClInclude Include="MiscellaneousTests.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Tests</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

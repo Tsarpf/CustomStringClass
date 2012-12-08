@@ -36,14 +36,12 @@ namespace Testing
 
 
 #define ASSERT(expr)										\
-m_TestsTotal++;												\
 															\
 if(!(expr))													\
 {															\
-	m_TestsFailed++;										\
-	throw std::exception("Assert failed in: " __FUNCTION__);\
+	throw std::exception(__FUNCTION__ "\tfailed");			\
 }															\
 else														\
 {															\
-	std::cout << __FUNCTION__ << " passed" << std::endl;		\
+	std::cout << __FUNCTION__ << "\tpassed" << std::endl;	\
 }

@@ -28,6 +28,8 @@ void Test::PerformTests()
 
 		bool result = true;
 
+		m_TestsTotal++;
+
 		try
 		{
 			(*it)();		
@@ -36,14 +38,14 @@ void Test::PerformTests()
 		{
 			m_TestsFailed++;
 			
-			std::cout << "\t" + m_TestNames[index] << " failed: " << e.what() <<std::endl;
+			std::cout << e.what() <<std::endl;
 		}
 
 		Teardown();
 	}
 
 	if(m_TestsFailed == 0)
-		std::cout << m_TestCategoryName << " succeeded. All " << m_TestsTotal << " tests passed.";
+		std::cout << m_TestCategoryName << " succeeded. " << m_TestsTotal << " out of " << m_TestsTotal << " tests passed"  << std::endl;
 	else
-		std::cout << m_TestCategoryName << " failed. " << m_TestsFailed << " out of " << m_TestsTotal << " tests failed.";
+		std::cout << m_TestCategoryName << " failed. " << m_TestsFailed << " out of " << m_TestsTotal << " tests failed." << std::endl;
 }
