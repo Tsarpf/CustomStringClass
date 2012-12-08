@@ -22,7 +22,7 @@ OperatorOverloadTests::~OperatorOverloadTests(void)
 void OperatorOverloadTests::UsingOperatorAtReturnCorrectChar()
 {
 	*m_String = "0123456789";
-	ASSERT((*m_String)[6] == '6');
+	ASSERT(*(*m_String)[6] == '6');
 }
 
 void OperatorOverloadTests::DataCorrectAfterAssignmentToOtherStringTest()

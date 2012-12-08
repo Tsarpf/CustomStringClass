@@ -12,11 +12,12 @@ public:
 
 	String& operator= (const String &);
 	String& operator= (const char *);
-	char operator[](int);
+	char* operator[](int);
 	bool operator==(const char *);
 	
 	char* begin();
 	char* end();
+
 
 	//Static String functions
 	static int StringLength(const char *);
@@ -24,6 +25,9 @@ public:
 	static char * StringCopy( const char *);
 
 	static bool StringsAreEqual(const char * a, const char * b);
+
+	static void Swap(String*,String*);
+
 	//Provide the class with a self-check capability (a check() function that verifies the class invariant).
 	void Check();
 	~String(void);

@@ -62,6 +62,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="InstanceAlterationMethodTests.h" />
     <ClInclude Include="IteratorTests.h" />
     <ClInclude Include="MiscellaneousTests.h" />
     <ClInclude Include="OperatorOverloadTests.h" />
@@ -71,6 +72,7 @@
     <ClInclude Include="TestDriver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="InstanceAlterationMethodTests.cpp" />
     <ClCompile Include="IteratorTests.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MiscellaneousTests.cpp" />
