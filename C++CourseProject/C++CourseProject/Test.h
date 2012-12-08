@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <functional>
+#include <iostream>
 
 namespace Testing
 {
@@ -19,9 +20,9 @@ namespace Testing
 		std::vector<std::function<bool()>> m_Tests;
 		std::vector<std::string> m_TestNames;
 
-		void AssertTrue(bool,bool); //Might be able to generalize for all tests
 		virtual void Setup() = 0;
 		virtual void Teardown() = 0;
+		bool StringsAreEqual(const char *, const char *);
 
 		int m_TestsTotal;
 		int m_TestsFailed;
@@ -31,3 +32,18 @@ namespace Testing
 }
 
 #endif //Test_H_
+
+
+
+#define ASSERT(expr)										\
+m_TestsTotal++;												\
+															\
+if(!(expr))													\
+{															\
+	m_TestsFailed++;										\
+	throw std::exception("Assert failed in: " __FUNCTION__);\
+}															\
+else														\
+{															\
+	std::cout << __FUNCTION__ << " passed" << std::endl;		\
+}

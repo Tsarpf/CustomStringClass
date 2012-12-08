@@ -7,9 +7,11 @@ namespace Testing
 	public:
 		TestDriver(void);
 		~TestDriver(void);
+
+		void BeginTesting();
+
 	private:
 		void PopulateTestCategoryList();
-		void BeginTesting();
 
 		std::vector<Test*> m_Tests;
 		int m_TotalTestCount;

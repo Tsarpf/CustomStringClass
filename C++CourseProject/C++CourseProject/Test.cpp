@@ -26,15 +26,21 @@ void Test::PerformTests()
 	{
 		Setup();
 
-		bool result = (*it)();		
+		bool result = true;
 
-		if(!result)
+		try
+		{
+			result = (*it)();		
+		}
+		catch(std::exception e)
 		{
 			m_TestsFailed++;
 			
-			std::cout << "\t" + m_TestNames[index] << " failed" << std::endl;
+			std::cout << "\t" + m_TestNames[index] << " failed: " << e.what() <<std::endl;
+			result = false;
 		}
-		else
+
+		if(result)
 		{
 			std::cout << "\t" << m_TestNames[index] << " succeeded" << std::endl;
 		}
@@ -52,5 +58,5 @@ void Test::PerformTests()
 	if(m_TestsFailed == 0)
 		std::cout << m_TestCategoryName << " succeeded. All " << m_TestsTotal << " tests passed.";
 	else
-		std::cout << m_TestCategoryName << " failed." << m_TestsFailed << " out of " << m_TestsTotal << " failed.";
+		std::cout << m_TestCategoryName << " failed. " << m_TestsFailed << " out of " << m_TestsTotal << " tests failed.";
 }
