@@ -18,6 +18,16 @@ String::String(const String & otherString)
 	m_String = StringCopy(otherString.m_String);
 }
 
+char* String::begin()
+{
+	return &m_String[0];
+}
+
+char* String::end()
+{
+	int endIdx =  StringLength(m_String);
+	return &m_String[endIdx];
+}
 
 String::~String(void)
 {

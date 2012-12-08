@@ -3,6 +3,7 @@
 #include "OperatorOverloadTests.h"
 #include "StringConstructorAndInitTests.h"
 #include "MiscellaneousTests.h"
+#include "IteratorTests.h"
 
 #include <iostream>
 
@@ -27,6 +28,7 @@ void TestDriver::PopulateTestCategoryList()
 	m_Tests.push_back(new OperatorOverloadTests());
 	m_Tests.push_back(new StringConstructorAndInitTests());
 	m_Tests.push_back(new MiscellaneousTests());
+	m_Tests.push_back(new IteratorTests());
 	//ToDo: add all test categories here.
 }
 
