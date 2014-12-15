@@ -23,12 +23,12 @@ MiscellaneousTests::MiscellaneousTests(void)
 
 void MiscellaneousTests::StringLengthReturnCorrectWhenNonZeroTest()
 {
-	ASSERT(m_String->StringLength("asdf") == 4); //remember the null terminator
+	ASSERT(m_String->StringLength("asdf") == 4);
 }
 
 void MiscellaneousTests::StringLengthReturnZeroWhenEmptyTest()
 {
-	ASSERT(m_String->StringLength("") == 0); //Same here as above
+	ASSERT(m_String->StringLength("") == 0);
 }
 
 MiscellaneousTests::~MiscellaneousTests(void)

@@ -34,11 +34,6 @@ String::~String(void)
 	delete [] m_String;
 }
 
-const char* String::data()
-{
-	return m_String; 
-}
-
 char& String::operator[](int index)
 {
 	if (index < 0 || index >= StringLength(m_String))
@@ -199,7 +194,7 @@ void String::Swap(String * A, String * B)
 {
 	String temporary = *A;
 
-	*B = StringCopy(A->data());
+	*B = StringCopy(A->m_String);
 	*A = temporary;
 }
 

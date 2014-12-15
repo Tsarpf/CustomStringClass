@@ -17,9 +17,6 @@ namespace Testing
 		void Teardown();
 
 	private:
-		//Tests
-
-		//void StringsAreEqual(const char *, const char *) tests
 		void StringsAreEqualWorksWithEmptyStringsTest();
 		void StringsAreEqualWorksWhenOtherStringIsEmptyTest();
 		void StringsAreEqualWorksWithDifferentStringsWithSameBeginningTest();
@@ -34,7 +31,6 @@ namespace Testing
 		void StringCopyCopiesNonEmptyStringCorrectly();
 
 	private:
-		//Data needed by tests
 		String * m_String;
 	};
 }

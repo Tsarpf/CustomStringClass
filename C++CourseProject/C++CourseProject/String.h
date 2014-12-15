@@ -9,6 +9,7 @@ public:
 	String(const String &);
 	String(const char *);
 
+	//Overloaded operators
 	String& operator= (const String &);
 	String& operator= (const char *);
 	char& operator[](int);
@@ -22,26 +23,26 @@ public:
 	char* end();
 
 
+	//Operations that operate on the object itself
 	String& insert(int, const String&);
 	void push_back(char c);
 	void pop_back();
 	String& erase(int, int);
 
+	//Convenience function
 	int length() const;
 
 
 	//Static string functions
 	static int StringLength(const char *);
-
 	static char * StringCopy( const char *);
-
 	static bool StringsAreEqual(const char * a, const char * b);
-
 	static void Swap(String*,String*);
 
-	~String(void);
-	const char* data();
+	~String();
+
 protected:
+	//Data
 	char* m_String;
 
 public:
@@ -82,12 +83,12 @@ public:
 			m_Pointer = OtherIterator.m_Pointer;
 			return *this;
 		}
-		Iterator& operator++() //prefix ++
+		Iterator& operator++()
 		{
 			m_Pointer++;
 			return *this;
 		}
-		Iterator operator++(int) //postfix ++
+		Iterator operator++(int)
 		{
 			Iterator result(*this);
 			++(*this);

@@ -9,8 +9,8 @@ namespace Testing
 	class OperatorOverloadTests : public Test
 	{
 	public:
-		OperatorOverloadTests(void);
-		~OperatorOverloadTests(void);
+		OperatorOverloadTests();
+		~OperatorOverloadTests();
 
 	private: //Present in every test category.
 		void Setup();

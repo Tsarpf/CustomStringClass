@@ -1,7 +1,7 @@
 #include "StringConstructorAndInitTests.h"
 using namespace Testing;
 
-StringConstructorAndInitTests::StringConstructorAndInitTests(void)
+StringConstructorAndInitTests::StringConstructorAndInitTests() : m_String()
 {
 	m_TestCategoryName = "String Constructor and Initialization Tests";
 
@@ -20,37 +20,32 @@ StringConstructorAndInitTests::~StringConstructorAndInitTests(void)
 
 void StringConstructorAndInitTests::DataCorrectIfUsedCopyConstructor()
 {
-	delete m_String;
-	String otherString("Test");
-	m_String = new String(otherString);
-	ASSERT(String::StringsAreEqual(m_String->data(), "Test"));
+	m_String = "test";
+	String* test = new String(m_String);
+	ASSERT(*test == "test");
 }
 
 void StringConstructorAndInitTests::DataCorrectIfCharPointerConstructorGivenEmptyStringLiteralTest()
 {
-	delete m_String;
-	m_String = new String("");
-	ASSERT(String::StringsAreEqual(m_String->data(), ""));
+	m_String =  String("");
+	ASSERT(m_String == "");
 }
 
 void StringConstructorAndInitTests::DataCorrectIfCharPointerConstructorGivenNonEmptyStringLiteralTest()
 {
-	delete m_String;
-	m_String = new String("testing testing");
-	ASSERT(String::StringsAreEqual(m_String->data(), "testing testing"));
+	m_String = String("testing testing");
+	ASSERT(m_String == "testing testing");
 }
 
 void StringConstructorAndInitTests::StringEmptyAfterDefaultConstructorTest()
 {
-	ASSERT(m_String->StringsAreEqual(m_String->data(), ""));
+	ASSERT(m_String == "");
 }
 
 void StringConstructorAndInitTests::Setup()
 {
-	m_String = new String;
 }
 
 void StringConstructorAndInitTests::Teardown()
 {
-	delete m_String;
 }

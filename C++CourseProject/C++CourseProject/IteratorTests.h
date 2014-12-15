@@ -7,8 +7,8 @@ namespace Testing
 	class IteratorTests : public Test
 	{
 	public:
-		IteratorTests(void);
-		~IteratorTests(void);
+		IteratorTests();
+		~IteratorTests();
 
 	private:
 		void Setup();

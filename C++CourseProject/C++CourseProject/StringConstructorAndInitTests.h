@@ -17,15 +17,13 @@ namespace Testing
 		void Teardown();
 
 	private:
-		//Tests
 		void StringEmptyAfterDefaultConstructorTest();
 		void DataCorrectIfCharPointerConstructorGivenEmptyStringLiteralTest();
 		void DataCorrectIfCharPointerConstructorGivenNonEmptyStringLiteralTest();
 
 		void DataCorrectIfUsedCopyConstructor();
 	private:
-		//Data needed by tests
-		String * m_String;
+		String m_String;
 	};
 }
 

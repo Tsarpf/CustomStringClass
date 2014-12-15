@@ -3,7 +3,7 @@
 
 using namespace Testing;
 
-OperatorOverloadTests::OperatorOverloadTests(void) : m_String()
+OperatorOverloadTests::OperatorOverloadTests() : m_String()
 {
 	m_TestCategoryName = "Operator Overload Tests";
 
@@ -20,7 +20,7 @@ OperatorOverloadTests::OperatorOverloadTests(void) : m_String()
 }
 
 
-OperatorOverloadTests::~OperatorOverloadTests(void)
+OperatorOverloadTests::~OperatorOverloadTests()
 {
 }
 void OperatorOverloadTests::OperatorAddWorks()
