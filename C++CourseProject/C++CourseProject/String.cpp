@@ -164,10 +164,32 @@ void String::push_back(char c)
 }
 void String::pop_back()
 {
-
+	m_String[length() - 1] = '\0';
+	char* temp = StringCopy(m_String);
+	delete[] m_String;
+	m_String = temp;
 }
-String& String::erase(int, int)
+String& String::erase(int start, int count)
 {
+	if (start > length() || start < 0)
+	{
+		throw std::exception("Start index out of bounds");
+	}
+	if (start + count > length())
+	{
+		count = length() - start;
+	}
+	m_String[start] = '\0';
+	char* temp = StringCopy(m_String);
+	char* temp2 = StringCopy(&m_String[start + count]);
+	String newString = temp;
+	newString += temp2;
+
+	m_String = StringCopy(newString.m_String);
+
+	delete[] temp;
+	delete[] temp2;
+
 	return *this;
 }
 

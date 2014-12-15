@@ -11,7 +11,6 @@ InsertionsAndDeletions::InsertionsAndDeletions() : m_String()
 	m_Tests.push_back([&]() { return InsertCharactersIntoString(); });
 	m_Tests.push_back([&]() { return EraseLastCharacter(); });
 	m_Tests.push_back([&]() { return AddCharacterToEnd(); });
-	//m_Tests.push_back([&]() { return IteratorPointsToCorrectCharacterAfterCharPointerConstructor();});
 
 }
 
@@ -21,15 +20,21 @@ InsertionsAndDeletions::~InsertionsAndDeletions()
 
 void InsertionsAndDeletions::ErasePartOfString()
 {
-	m_String = "testingk";
+	m_String = "testdetest";
 
-	m_String.erase(3, 3);
+	m_String.erase(4, 2);
 
-	ASSERT(m_String == "test");
+	ASSERT(m_String == "testtest");
 
 
+	m_String = "newtest";
 	m_String.erase(0, 10);
 	ASSERT(m_String == "");
+
+
+	m_String = "testremovetest";
+	m_String.erase(4, 6);
+	ASSERT(m_String == "testtest");
 }
 
 void InsertionsAndDeletions::InsertCharactersIntoString()
