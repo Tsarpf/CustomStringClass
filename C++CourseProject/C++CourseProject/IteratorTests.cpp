@@ -4,6 +4,8 @@ using namespace Testing;
 
 IteratorTests::IteratorTests(void)
 {
+	m_TestCategoryName = "Iterator Tests";
+	
 	m_Tests.push_back([&]() { return IteratorPointsToCorrectCharacterAfterCharPointerConstructor();});
 	m_Tests.push_back([&]() { return IteratorPointsToNullAfterDefaultConstructorTest();});
 

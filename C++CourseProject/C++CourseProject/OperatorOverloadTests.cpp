@@ -1,16 +1,18 @@
 #include "OperatorOverloadTests.h"
+#include "String.h"
 
 using namespace Testing;
 
-OperatorOverloadTests::OperatorOverloadTests(void)
+OperatorOverloadTests::OperatorOverloadTests(void) : m_String()
 {
-	m_TestCategoryName = "OperatorOverloadTests";
+	m_TestCategoryName = "Operator Overload Tests";
 
 	//Add all test functions and their names here.
 	m_Tests.push_back([&]() { return DataCorrectAfterAssignmentToCharPointerTest(); });
 	m_Tests.push_back([&]() { return EqualToOperatorReturnsTrueWhenComparingToEqualStringLiteralTest(); });
 	m_Tests.push_back([&]() { return DataCorrectAfterAssignmentToOtherStringTest();});
 	m_Tests.push_back([&]() { return UsingOperatorAtReturnCorrectChar();});
+	m_Tests.push_back([&]() { return OperatorEqualsAndUnEqualsWorkBetweenStrings(); });
 
 }
 
@@ -21,36 +23,46 @@ OperatorOverloadTests::~OperatorOverloadTests(void)
 
 void OperatorOverloadTests::UsingOperatorAtReturnCorrectChar()
 {
-	*m_String = "0123456789";
-	ASSERT(*(*m_String)[6] == '6');
+	m_String = "0123456789";
+	ASSERT(m_String[6] == '6');
 }
 
 void OperatorOverloadTests::DataCorrectAfterAssignmentToOtherStringTest()
 {
 	String otherString("asdf");
-	*m_String = otherString;
+	m_String = otherString;
 
-	ASSERT(String::StringsAreEqual(m_String->data(), "asdf"));
+	ASSERT(m_String == "asdf");
 }
 
 void OperatorOverloadTests::DataCorrectAfterAssignmentToCharPointerTest()
 {
-	*m_String = "teststring";
-	ASSERT(String::StringsAreEqual(m_String->data(), "teststring"));
+	m_String = "teststring";
+	ASSERT(m_String == "teststring");
+}
+
+void OperatorOverloadTests::OperatorEqualsAndUnEqualsWorkBetweenStrings()
+{
+	String other("cheers");
+	m_String = "yeah";
+
+	ASSERT(other != m_String);
+
+	m_String = "cheers";
+
+	ASSERT(other == m_String);
 }
 
 void OperatorOverloadTests::EqualToOperatorReturnsTrueWhenComparingToEqualStringLiteralTest()
 {
-	*m_String = "teststring";
+	m_String = "teststring";
 
-	ASSERT(*m_String == "teststring");
+	ASSERT(m_String == "teststring");
 }
 void OperatorOverloadTests::Setup()
 {
-	m_String = new String; //Todo: check what constructor to use etc.
 }
 
 void OperatorOverloadTests::Teardown()
 {
-	delete m_String;
 }

@@ -4,6 +4,7 @@
 #include "StringConstructorAndInitTests.h"
 #include "MiscellaneousTests.h"
 #include "IteratorTests.h"
+#include "InsertionsAndDeletions.h"
 
 #include <iostream>
 
@@ -29,6 +30,7 @@ void TestDriver::PopulateTestCategoryList()
 	m_Tests.push_back(new StringConstructorAndInitTests());
 	m_Tests.push_back(new MiscellaneousTests());
 	m_Tests.push_back(new IteratorTests());
+	m_Tests.push_back(new InsertionsAndDeletions());
 	//ToDo: add all test categories here.
 }
 

@@ -11,14 +11,22 @@ public:
 
 	String& operator= (const String &);
 	String& operator= (const char *);
-	char* operator[](int);
+	char& operator[](int);
 	bool operator==(const char *);
+	bool operator==(const String &);
+	bool operator!=(const String &);
 	
 	char* begin();
 	char* end();
 
 
-	//Static String functions
+	String& insert(int, const String&);
+	void push_back(char c);
+	void pop_back();
+	String& erase(int, int);
+
+
+	//Static string functions
 	static int StringLength(const char *);
 
 	static char * StringCopy( const char *);

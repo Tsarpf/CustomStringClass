@@ -17,13 +17,14 @@ namespace Testing
 		void Teardown();
 		
 	private: //Test category specific.
-		String * m_String;
+		String m_String;
 
 		//Tests
 		void DataCorrectAfterAssignmentToCharPointerTest();
 		void EqualToOperatorReturnsTrueWhenComparingToEqualStringLiteralTest();
 		void DataCorrectAfterAssignmentToOtherStringTest();
 		void UsingOperatorAtReturnCorrectChar();
+		void OperatorEqualsAndUnEqualsWorkBetweenStrings();
 	};
 }
 

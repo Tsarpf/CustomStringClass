@@ -3,7 +3,7 @@ using namespace Testing;
 
 StringConstructorAndInitTests::StringConstructorAndInitTests(void)
 {
-	m_TestCategoryName = "OperatorOverloadTests";
+	m_TestCategoryName = "String Constructor and Initialization Tests";
 
 	//Add all test functions and their names here.
 	m_Tests.push_back([&]() { return StringEmptyAfterDefaultConstructorTest(); });

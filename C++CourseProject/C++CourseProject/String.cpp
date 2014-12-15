@@ -39,21 +39,27 @@ const char* String::data()
 	return m_String; 
 }
 
-char* String::operator[](int index)
+char& String::operator[](int index)
 {
 	if(index < 0 || index >= StringLength(m_String))
 		throw std::exception("Index out of bounds");
 
-	if(StringLength(m_String) == 1)
-		return nullptr;
-
-
-	return &m_String[index];
+	return m_String[index];
 }
 
 bool String::operator==(const char * inputString)
 {
 	return StringsAreEqual(m_String, inputString);
+}
+
+bool String::operator==(const String &inputString)
+{
+	return StringsAreEqual(m_String, inputString.m_String);
+}
+
+bool String::operator!=(const String &inputString)
+{
+	return !(m_String == inputString.m_String);
 }
 
 String& String::operator=(const String & OtherString)
@@ -69,6 +75,24 @@ String& String::operator=(const char * InputString)
 
 	return *this;
 }
+
+String& String::insert(int pos, const String& other)
+{
+	int length = StringLength(other.m_String);
+
+	return *this;
+}
+void String::push_back(char c)
+{
+}
+void String::pop_back()
+{
+}
+String& String::erase(int, int)
+{
+	return *this;
+}
+
 
 
 void String::Swap(String * A, String * B)
@@ -101,7 +125,7 @@ int String::StringLength(const char * InputString)
 	{
 		i++;
 	}
-	return i + 1; //+1 comes from null terminator
+	return i; //+1 comes from null terminator
 }
 
 bool String::StringsAreEqual(const char * a , const char * b)

@@ -13,6 +13,7 @@ namespace Testing
 	private:
 		void Setup();
 		void Teardown();
+		
 
 	private:
 		String * m_String;

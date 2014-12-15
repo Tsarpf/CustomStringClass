@@ -4,7 +4,7 @@ using namespace Testing;
 
 MiscellaneousTests::MiscellaneousTests(void)
 {
-	m_TestCategoryName = "MiscellaneousTests";
+	m_TestCategoryName = "Miscellaneous Tests";
 
 	//StringsAreEqual
 	m_Tests.push_back([&]() { return StringsAreEqualWorksWithEmptyStringsTest(); });
@@ -23,12 +23,12 @@ MiscellaneousTests::MiscellaneousTests(void)
 
 void MiscellaneousTests::StringLengthReturnCorrectWhenNonZeroTest()
 {
-	ASSERT(m_String->StringLength("asdf") == 5); //remember the null terminator
+	ASSERT(m_String->StringLength("asdf") == 4); //remember the null terminator
 }
 
 void MiscellaneousTests::StringLengthReturnZeroWhenEmptyTest()
 {
-	ASSERT(m_String->StringLength("") == 1); //Same here as above
+	ASSERT(m_String->StringLength("") == 0); //Same here as above
 }
 
 MiscellaneousTests::~MiscellaneousTests(void)

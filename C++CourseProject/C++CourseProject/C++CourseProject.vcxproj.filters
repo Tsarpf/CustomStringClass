@@ -45,6 +45,9 @@
     <ClCompile Include="IteratorTests.cpp">
       <Filter>Source Files\Tests</Filter>
     </ClCompile>
+    <ClCompile Include="InsertionsAndDeletions.cpp">
+      <Filter>Source Files\Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="String.h">
@@ -66,6 +69,9 @@
       <Filter>Header Files\Tests</Filter>
     </ClInclude>
     <ClInclude Include="IteratorTests.h">
+      <Filter>Header Files\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="InsertionsAndDeletions.h">
       <Filter>Header Files\Tests</Filter>
     </ClInclude>
   </ItemGroup>
