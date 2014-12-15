@@ -149,6 +149,18 @@ String& String::insert(int pos, const String& other)
 }
 void String::push_back(char c)
 {
+	char* temp = new char[this->length() + 1 + 1]; //One for null terminator, one for new character
+	int i;
+	for (i = 0; i < this->length(); i++)
+	{
+		temp[i] = m_String[i];
+	}
+
+	temp[i] = c;
+	temp[i + 1] = '\0';
+
+	delete[] m_String;
+	m_String = temp;
 }
 void String::pop_back()
 {
