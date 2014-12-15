@@ -15,7 +15,9 @@ public:
 	bool operator==(const char *);
 	bool operator==(const String &);
 	bool operator!=(const String &);
-	
+
+	String operator+=(const String& other);
+
 	char* begin();
 	char* end();
 
@@ -24,6 +26,8 @@ public:
 	void push_back(char c);
 	void pop_back();
 	String& erase(int, int);
+
+	int length() const;
 
 
 	//Static string functions
@@ -93,5 +97,7 @@ public:
 		char * m_Pointer;
 	};
 };
+
+String operator+(const String& lhs, const String& rhs);
 
 #endif //String_H_

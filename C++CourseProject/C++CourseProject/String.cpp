@@ -41,7 +41,7 @@ const char* String::data()
 
 char& String::operator[](int index)
 {
-	if(index < 0 || index >= StringLength(m_String))
+	if (index < 0 || index >= StringLength(m_String))
 		throw std::exception("Index out of bounds");
 
 	return m_String[index];
@@ -76,9 +76,48 @@ String& String::operator=(const char * InputString)
 	return *this;
 }
 
+String String::operator+=(const String& other)
+{
+	int newLength = other.length() + this->length() + 1;
+	char* temp = new char[newLength];
+	int i;
+	for (i = 0; i < this->length(); i++)
+	{
+		temp[i] = m_String[i];
+	}
+
+	for (int j = 0; j < other.length(); j++)
+	{
+		temp[i + j] = other.m_String[j];
+	}
+
+	temp[newLength - 1] = '\0';
+
+	delete [] m_String;
+	m_String = temp;
+
+	return *this;
+}
+
+
+int String::length() const
+{
+	return StringLength(m_String);
+}
+
 String& String::insert(int pos, const String& other)
 {
 	int length = StringLength(other.m_String);
+
+	if (pos < 0)
+	{
+		throw std::exception("Index out of bounds");
+	}
+
+	if (length <= pos)
+	{
+		
+	}
 
 	return *this;
 }
@@ -105,7 +144,7 @@ void String::Swap(String * A, String * B)
 
 char * String::StringCopy(const char * B)
 {
-	int length = StringLength(B);
+	int length = StringLength(B) + 1;
 
 	char * a = new char[length];
 
@@ -125,7 +164,7 @@ int String::StringLength(const char * InputString)
 	{
 		i++;
 	}
-	return i; //+1 comes from null terminator
+	return i;
 }
 
 bool String::StringsAreEqual(const char * a , const char * b)
@@ -141,4 +180,11 @@ bool String::StringsAreEqual(const char * a , const char * b)
 		return false;
 
 	return true;
+}
+
+String operator+(const String& lhs, const String& rhs)
+{
+	String temp = lhs;
+	temp += rhs;
+	return temp;
 }

@@ -13,12 +13,32 @@ OperatorOverloadTests::OperatorOverloadTests(void) : m_String()
 	m_Tests.push_back([&]() { return DataCorrectAfterAssignmentToOtherStringTest();});
 	m_Tests.push_back([&]() { return UsingOperatorAtReturnCorrectChar();});
 	m_Tests.push_back([&]() { return OperatorEqualsAndUnEqualsWorkBetweenStrings(); });
+	m_Tests.push_back([&]() { return OperatorAddWorks(); });
+	m_Tests.push_back([&]() { return OperatorAddToThisWorks(); });
 
 }
 
 
 OperatorOverloadTests::~OperatorOverloadTests(void)
 {
+}
+void OperatorOverloadTests::OperatorAddWorks()
+{
+	m_String = "test";
+	String other = "ing";
+
+	String third = m_String + other;
+
+	ASSERT(third == "testing");
+}
+void OperatorOverloadTests::OperatorAddToThisWorks()
+{
+	m_String = "ing";
+	String other = "test";
+
+	other += m_String;
+
+	ASSERT(other == "testing");
 }
 
 void OperatorOverloadTests::UsingOperatorAtReturnCorrectChar()

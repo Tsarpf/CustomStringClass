@@ -25,6 +25,9 @@ namespace Testing
 		void DataCorrectAfterAssignmentToOtherStringTest();
 		void UsingOperatorAtReturnCorrectChar();
 		void OperatorEqualsAndUnEqualsWorkBetweenStrings();
+
+		void OperatorAddWorks();
+		void OperatorAddToThisWorks();
 	};
 }
 
