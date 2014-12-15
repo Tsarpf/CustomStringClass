@@ -107,17 +107,43 @@ int String::length() const
 
 String& String::insert(int pos, const String& other)
 {
-	int length = StringLength(other.m_String);
 
 	if (pos < 0)
 	{
 		throw std::exception("Index out of bounds");
 	}
 
-	if (length <= pos)
+	if (this->length() < pos)
 	{
-		
+		pos = this->length();
 	}
+
+	int newLength = this->length() + other.length();
+	char* temp = new char[newLength + 1];
+	int i;
+	int k = 0;
+	for (i = 0; i < pos; i++)
+	{
+		temp[i] = m_String[k];
+		k++;
+	}
+
+	for (int j = 0; j < other.length(); j++)
+	{
+		temp[i] = other.m_String[j];
+		i++;
+	}
+
+	for (; i < newLength; i++)
+	{
+		temp[i] = m_String[k];
+		k++;
+	}
+
+	temp[i] = '\0';
+
+	delete[] m_String;
+	m_String = temp;
 
 	return *this;
 }
