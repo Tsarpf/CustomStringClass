@@ -164,6 +164,7 @@ void String::push_back(char c)
 }
 void String::pop_back()
 {
+
 }
 String& String::erase(int, int)
 {

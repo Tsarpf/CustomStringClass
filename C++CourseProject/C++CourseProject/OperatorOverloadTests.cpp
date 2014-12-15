@@ -12,6 +12,7 @@ OperatorOverloadTests::OperatorOverloadTests(void) : m_String()
 	m_Tests.push_back([&]() { return EqualToOperatorReturnsTrueWhenComparingToEqualStringLiteralTest(); });
 	m_Tests.push_back([&]() { return DataCorrectAfterAssignmentToOtherStringTest();});
 	m_Tests.push_back([&]() { return UsingOperatorAtReturnCorrectChar();});
+	m_Tests.push_back([&]() { return ChangingCharUsingOperatorAtWorks(); });
 	m_Tests.push_back([&]() { return OperatorEqualsAndUnEqualsWorkBetweenStrings(); });
 	m_Tests.push_back([&]() { return OperatorAddWorks(); });
 	m_Tests.push_back([&]() { return OperatorAddToThisWorks(); });
@@ -41,6 +42,12 @@ void OperatorOverloadTests::OperatorAddToThisWorks()
 	ASSERT(other == "testing");
 }
 
+void OperatorOverloadTests::ChangingCharUsingOperatorAtWorks()
+{
+	m_String = "1234";
+	m_String[0] = '2';
+	ASSERT(m_String == "2234");
+}
 void OperatorOverloadTests::UsingOperatorAtReturnCorrectChar()
 {
 	m_String = "0123456789";

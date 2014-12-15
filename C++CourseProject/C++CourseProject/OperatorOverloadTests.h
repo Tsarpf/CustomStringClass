@@ -24,6 +24,7 @@ namespace Testing
 		void EqualToOperatorReturnsTrueWhenComparingToEqualStringLiteralTest();
 		void DataCorrectAfterAssignmentToOtherStringTest();
 		void UsingOperatorAtReturnCorrectChar();
+		void ChangingCharUsingOperatorAtWorks();
 		void OperatorEqualsAndUnEqualsWorkBetweenStrings();
 
 		void OperatorAddWorks();
